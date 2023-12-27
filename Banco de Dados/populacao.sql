@@ -1231,3 +1231,15 @@ INSERT INTO materiaprima_produto (id_produto,id_materiaPrima) VALUES
 (18,22),
 (19,6),
 (20,30);
+
+INSERT INTO materiaprima_produto (id_produto,id_materiaPrima) VALUES
+(3,4),
+(6,11),
+(9,20),
+(15,29),
+(17,32),
+(2,34),
+(11,37),
+(19,40),
+(1,43),
+(2,50);
