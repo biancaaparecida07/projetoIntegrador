@@ -1245,3 +1245,27 @@ INSERT INTO materiaprima_produto (id_produto,id_materiaPrima) VALUES
 (2,50);
 
 ALTER TABLE produtos ADD column valor_unitario double;
+
+UPDATE produtos SET valor_unitario = CASE 
+	WHEN id = 1 THEN 47442
+	WHEN id = 2 THEN 21030
+	WHEN id = 3 THEN 35753
+	WHEN id = 4 THEN 39860
+	WHEN id = 5 THEN 36077
+	WHEN id = 6 THEN 15319
+	WHEN id = 7 THEN 21980
+	WHEN id = 8 THEN 15694
+	WHEN id = 9 THEN 41210
+	WHEN id = 10 THEN 21553
+	WHEN id = 11 THEN 34036
+	WHEN id = 12 THEN 45607
+	WHEN id = 13 THEN 28958
+	WHEN id = 14 THEN 48694
+	WHEN id = 15 THEN 27848
+	WHEN id = 16 THEN 16229
+	WHEN id = 17 THEN 38293
+	WHEN id = 18 THEN 10878
+	WHEN id = 19 THEN 23546
+	WHEN id = 20 THEN 34715
+END
+WHERE id IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
