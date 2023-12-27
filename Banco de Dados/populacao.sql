@@ -1243,3 +1243,5 @@ INSERT INTO materiaprima_produto (id_produto,id_materiaPrima) VALUES
 (19,40),
 (1,43),
 (2,50);
+
+ALTER TABLE produtos ADD column valor_unitario double;
