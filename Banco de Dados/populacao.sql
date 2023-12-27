@@ -575,3 +575,10 @@ INSERT INTO materia_prima (id, nome, valor_unitario) VALUES
 (48,'Componente48',2548),
 (49,'Componente49',1393),
 (50,'Componente50',2566);
+
+INSERT INTO fornecedor (nome) VALUES
+('Fornecedor1'),
+('Fornecedor2'),
+('Fornecedor3'),
+('Fornecedor4'),
+('Fornecedor5');
