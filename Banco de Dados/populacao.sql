@@ -1338,3 +1338,5 @@ delete from materia_prima where id>30;
 set foreign_key_checks = 1;
 
 delete from materiaprima_produto where id_materiaprima > 30;
+
+alter table materia_prima add column categoria_materiaprima varchar(25);
