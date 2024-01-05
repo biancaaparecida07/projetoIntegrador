@@ -1340,3 +1340,37 @@ set foreign_key_checks = 1;
 delete from materiaprima_produto where id_materiaprima > 30;
 
 alter table materia_prima add column categoria_materiaprima varchar(25);
+
+UPDATE materia_prima SET categoria_materiaprima = CASE
+	WHEN id = 1 THEN 'Categoria 01'
+	WHEN id = 2 THEN 'Categoria 03'
+	WHEN id = 3 THEN 'Categoria 05'
+	WHEN id = 4 THEN 'Categoria 02'
+	WHEN id = 5 THEN 'Categoria 04'
+	WHEN id = 6 THEN 'Categoria 01'
+	WHEN id = 7 THEN 'Categoria 02'
+	WHEN id = 8 THEN 'Categoria 03'
+	WHEN id = 9 THEN 'Categoria 03'
+	WHEN id = 10 THEN 'Categoria 02'
+	WHEN id = 11 THEN 'Categoria 04'
+	WHEN id = 12 THEN 'Categoria 05'
+	WHEN id = 13 THEN 'Categoria 05'
+	WHEN id = 14 THEN 'Categoria 05'
+	WHEN id = 15 THEN 'Categoria 02'
+	WHEN id = 16 THEN 'Categoria 01'
+	WHEN id = 17 THEN 'Categoria 03'
+	WHEN id = 18 THEN 'Categoria 05'
+	WHEN id = 19 THEN 'Categoria 01'
+	WHEN id = 20 THEN 'Categoria 04'
+	WHEN id = 21 THEN 'Categoria 05'
+	WHEN id = 22 THEN 'Categoria 01'
+	WHEN id = 23 THEN 'Categoria 03'
+	WHEN id = 24 THEN 'Categoria 04'
+	WHEN id = 25 THEN 'Categoria 04'
+	WHEN id = 26 THEN 'Categoria 01'
+	WHEN id = 27 THEN 'Categoria 04'
+	WHEN id = 28 THEN 'Categoria 03'
+	WHEN id = 29 THEN 'Categoria 01'
+	WHEN id = 30 THEN 'Categoria 05'
+END
+WHERE id IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30);
