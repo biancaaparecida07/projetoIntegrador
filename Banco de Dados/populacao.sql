@@ -1269,3 +1269,6 @@ UPDATE produtos SET valor_unitario = CASE
 	WHEN id = 20 THEN 34715
 END
 WHERE id IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+
+drop table materiaprima_fornecedor;
+drop table fornecedor;
