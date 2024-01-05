@@ -1336,3 +1336,5 @@ delete from estoque_materiaprima where id_materiaPrima > 30;
 set foreign_key_checks = 0;
 delete from materia_prima where id>30;
 set foreign_key_checks = 1;
+
+delete from materiaprima_produto where id_materiaprima > 30;
