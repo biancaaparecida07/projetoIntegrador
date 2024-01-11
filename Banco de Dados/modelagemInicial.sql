@@ -49,3 +49,19 @@ create table materiaPrima_produto(
 -- Adicionando colunas de quantidade de saída nas tabelas de estoques.
 alter table estoque_produtos add column qtde_saida int;
 alter table estoque_materiaPrima add column qtde_saida int;
+
+#CRIAÇÃO DE TABELA FORNECEDOR
+-- Tabela fornecedor
+ 
+CREATE TABLE fornecedor (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50)
+);
+
+create table materiaPrima_fornecedor(
+	id INT PRIMARY KEY AUTO_INCREMENT,
+    id_materiaPrima INT,
+    FOREIGN KEY (id_materiaPrima) REFERENCES materia_prima(id),
+    id_fornecedor INT,
+    FOREIGN KEY (id_fornecedor) REFERENCES fornecedor(id)
+);
