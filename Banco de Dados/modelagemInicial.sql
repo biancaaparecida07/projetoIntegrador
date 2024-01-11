@@ -8,12 +8,6 @@ CREATE TABLE Produtos (
     categoria_produto INT
 );
 
---CRIAÇÃO DE TABELA FORNECEDOR
-CREATE TABLE fornecedor (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    nome VARCHAR(50)
-);
- 
 --CRIAÇÃO DE TABELA MATERIA PRIMA
 CREATE TABLE materia_prima (
     id INT PRIMARY KEY AUTO_INCREMENT,
@@ -52,15 +46,6 @@ create table materiaPrima_produto(
     FOREIGN KEY (id_produto) REFERENCES produtos(id)
 );
  
--- CRIAÇÃO DE TABELA DE RELACIONAMENTO DE MATÉRIA PRIMA COM FORNECEDOR.
-create table materiaPrima_fornecedor(
-	id INT PRIMARY KEY AUTO_INCREMENT,
-    id_materiaPrima INT,
-    FOREIGN KEY (id_materiaPrima) REFERENCES materia_prima(id),
-    id_fornecedor INT,
-    FOREIGN KEY (id_fornecedor) REFERENCES fornecedor(id)
-);
-
 -- Adicionando colunas de quantidade de saída nas tabelas de estoques.
 alter table estoque_produtos add column qtde_saida int;
 alter table estoque_materiaPrima add column qtde_saida int;
