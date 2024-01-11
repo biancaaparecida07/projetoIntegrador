@@ -1075,3 +1075,51 @@ UPDATE materia_prima SET nome = CASE
 	WHEN id = 30 THEN 'Componente 30'
 END
 WHERE id IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30);
+
+INSERT INTO fornecedor (nome) VALUES
+('Fornecedor1'),
+('Fornecedor2'),
+('Fornecedor3'),
+('Fornecedor4'),
+('Fornecedor5');
+
+INSERT INTO materiaprima_fornecedor (id_materiaPrima, id_fornecedor) VALUES
+(1,4),
+(2,2),
+(3,1),
+(4,5),
+(5,3),
+(6,2),
+(7,4),
+(8,1),
+(9,3),
+(10,5),
+(11,4),
+(12,2),
+(13,5),
+(14,3),
+(15,1),
+(16,4),
+(17,5),
+(18,2),
+(19,3),
+(20,2),
+(21,5),
+(22,1),
+(23,3),
+(24,4),
+(25,2),
+(26,1),
+(27,4),
+(28,3),
+(29,1),
+(30,2),
+(17,1),
+(24,2),
+(7,2),
+(9,5),
+(18,3),
+(20,3),
+(25,3),
+(8,4),
+(14,1);
