@@ -8,7 +8,7 @@ CREATE TABLE Produtos (
     categoria_produto INT
 );
 
---CRIAÇÃO DE TABELA MATERIA PRIMA
+-- CRIAÇÃO DE TABELA MATERIA PRIMA
 CREATE TABLE materia_prima (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50),
