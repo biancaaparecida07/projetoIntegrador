@@ -863,7 +863,6 @@ INSERT INTO materiaprima_produto (id_produto,id_materiaPrima) VALUES
 (7,21),
 (8,24),
 (8,8),
-(8,47),
 (9,27),
 (9,15),
 (10,30),
