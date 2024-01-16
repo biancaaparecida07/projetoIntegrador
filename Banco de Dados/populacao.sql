@@ -1,4 +1,5 @@
 
+-- Inserindo dados na tabela de produtos. 
 INSERT INTO Produtos (id, nome_produto, categoria_produto) VALUES
 (1,'Produto1',4),
 (2,'Produto2',3),
@@ -21,7 +22,7 @@ INSERT INTO Produtos (id, nome_produto, categoria_produto) VALUES
 (19,'Produto19',1),
 (20,'Produto20',1);
 
-
+-- Inserindo dados na tabela de estoque de produtos.
 INSERT INTO estoque_produtos (id,data_entrada,data_saida, qtde_inicial,qtde_entrada, qtde_saida, id_produto) VALUES
 (1,'2014-08-09','2023-01-15',5,49,9,6),
 (2,'2017-08-14','2020-01-07',23,46,7,12),
@@ -524,6 +525,7 @@ INSERT INTO estoque_produtos (id,data_entrada,data_saida, qtde_inicial,qtde_entr
 (499,'2015-11-02','2021-05-30',5,28,19,14),
 (500,'2018-08-09','2022-11-12',24,35,13,5);
 
+-- Inserindo dados na tabela de matéria-prima.
 INSERT INTO materia_prima (id, nome, valor_unitario) VALUES
 (1,'Componente1',123),
 (2,'Componente2',4390),
@@ -556,6 +558,7 @@ INSERT INTO materia_prima (id, nome, valor_unitario) VALUES
 (29,'Componente29',3301),
 (30,'Componente30',2340);
 
+-- Inserindo dados na tabela de estoque de matérias-primas.
 INSERT INTO estoque_materiaprima (id, data_entrada,data_saida, qtde_inicial,qtde_entrada, qtde_saida, id_materiaPrima) VALUES
 (1,'2015-05-03','2019-06-06',8,30,14,4),
 (2,'2020-04-01','2022-01-01',2,44,6,19),
@@ -847,6 +850,7 @@ INSERT INTO estoque_materiaprima (id, data_entrada,data_saida, qtde_inicial,qtde
 (497,'2013-12-25','2019-05-20',42,26,10,4),
 (499,'2014-03-21','2021-09-12',24,46,3,30);
 
+-- Inserindo dados na tabela de relacionamento entre matéria-prima e produtos. 
 INSERT INTO materiaprima_produto (id_produto,id_materiaPrima) VALUES
 (1,3),
 (1,14),
@@ -900,8 +904,10 @@ INSERT INTO materiaprima_produto (id_produto,id_materiaPrima) VALUES
 (9,20),
 (15,29);
 
+-- Adicionando coluna para valor unitário na tabela de produtos. 
 ALTER TABLE produtos ADD column valor_unitario double;
 
+-- Inserindo dados de valor unitário na tabela de produtos. 
 UPDATE produtos SET valor_unitario = CASE 
 	WHEN id = 1 THEN 47442
 	WHEN id = 2 THEN 21030
@@ -926,64 +932,10 @@ UPDATE produtos SET valor_unitario = CASE
 END
 WHERE id IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
 
-alter table materia_prima add column nome_fornecedor varchar(25);
-
-UPDATE materia_prima SET nome_fornecedor = CASE
-	WHEN id = 1 THEN 'Fornecedor 04'
-	WHEN id = 2 THEN 'Fornecedor 02'
-	WHEN id = 3 THEN 'Fornecedor 01'
-	WHEN id = 4 THEN 'Fornecedor 05'
-	WHEN id = 5 THEN 'Fornecedor 03'
-	WHEN id = 6 THEN 'Fornecedor 02'
-	WHEN id = 7 THEN 'Fornecedor 04'
-	WHEN id = 8 THEN 'Fornecedor 01'
-	WHEN id = 9 THEN 'Fornecedor 03'
-	WHEN id = 10 THEN 'Fornecedor 05'
-	WHEN id = 11 THEN 'Fornecedor 04'
-	WHEN id = 12 THEN 'Fornecedor 02'
-	WHEN id = 13 THEN 'Fornecedor 05'
-	WHEN id = 14 THEN 'Fornecedor 03'
-	WHEN id = 15 THEN 'Fornecedor 01'
-	WHEN id = 16 THEN 'Fornecedor 04'
-	WHEN id = 17 THEN 'Fornecedor 05'
-	WHEN id = 18 THEN 'Fornecedor 02'
-	WHEN id = 19 THEN 'Fornecedor 03'
-	WHEN id = 20 THEN 'Fornecedor 02'
-	WHEN id = 21 THEN 'Fornecedor 05'
-	WHEN id = 22 THEN 'Fornecedor 01'
-	WHEN id = 23 THEN 'Fornecedor 03'
-	WHEN id = 24 THEN 'Fornecedor 04'
-	WHEN id = 25 THEN 'Fornecedor 02'
-	WHEN id = 26 THEN 'Fornecedor 01'
-	WHEN id = 27 THEN 'Fornecedor 04'
-	WHEN id = 28 THEN 'Fornecedor 03'
-	WHEN id = 29 THEN 'Fornecedor 01'
-	WHEN id = 30 THEN 'Fornecedor 02'
-	WHEN id = 31 THEN 'Fornecedor 04'
-	WHEN id = 32 THEN 'Fornecedor 01'
-	WHEN id = 33 THEN 'Fornecedor 03'
-	WHEN id = 34 THEN 'Fornecedor 05'
-	WHEN id = 35 THEN 'Fornecedor 01'
-	WHEN id = 36 THEN 'Fornecedor 04'
-	WHEN id = 37 THEN 'Fornecedor 05'
-	WHEN id = 38 THEN 'Fornecedor 02'
-	WHEN id = 39 THEN 'Fornecedor 03'
-	WHEN id = 40 THEN 'Fornecedor 01'
-	WHEN id = 41 THEN 'Fornecedor 04'
-	WHEN id = 42 THEN 'Fornecedor 02'
-	WHEN id = 43 THEN 'Fornecedor 03'
-	WHEN id = 44 THEN 'Fornecedor 04'
-	WHEN id = 45 THEN 'Fornecedor 05'
-	WHEN id = 46 THEN 'Fornecedor 05'
-	WHEN id = 47 THEN 'Fornecedor 01'
-	WHEN id = 48 THEN 'Fornecedor 05'
-	WHEN id = 49 THEN 'Fornecedor 02'
-	WHEN id = 50 THEN 'Fornecedor 03'
-END
-WHERE id IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50);
-
+-- Adicionando coluna para categoria em matéria-prima. 
 alter table materia_prima add column categoria_materiaprima varchar(25);
 
+-- Adicionando dados de categoria na coluna adicionada na tabela de matéria-prima.
 UPDATE materia_prima SET categoria_materiaprima = CASE
 	WHEN id = 1 THEN 'Categoria 01'
 	WHEN id = 2 THEN 'Categoria 03'
@@ -1018,6 +970,7 @@ UPDATE materia_prima SET categoria_materiaprima = CASE
 END
 WHERE id IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30);
 
+-- Atualizando o nome dos produtos para maior clareza, separando os números da palavra. 
 UPDATE produtos SET nome_produto = CASE
 	WHEN id = 1 THEN 'Produto 01'
 	WHEN id = 2 THEN 'Produto 02'
@@ -1042,6 +995,7 @@ UPDATE produtos SET nome_produto = CASE
 END
 WHERE id IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20);
 
+-- Atualizando o nome das matérias-primas para maior clareza, separando os números da palavra. 
 UPDATE materia_prima SET nome = CASE
 	WHEN id = 1 THEN 'Componente 01'
 	WHEN id = 2 THEN 'Componente 02'
@@ -1076,6 +1030,7 @@ UPDATE materia_prima SET nome = CASE
 END
 WHERE id IN (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30);
 
+-- Inserindo tabela de fornecedores
 INSERT INTO fornecedor (nome) VALUES
 ('Fornecedor1'),
 ('Fornecedor2'),
@@ -1083,6 +1038,7 @@ INSERT INTO fornecedor (nome) VALUES
 ('Fornecedor4'),
 ('Fornecedor5');
 
+-- Inserindo dados na tabela de relacionamento entre matérias-primas e fornecedores.
 INSERT INTO materiaprima_fornecedor (id_materiaPrima, id_fornecedor) VALUES
 (1,4),
 (2,2),
@@ -1123,3 +1079,17 @@ INSERT INTO materiaprima_fornecedor (id_materiaPrima, id_fornecedor) VALUES
 (25,3),
 (8,4),
 (14,1);
+
+-- Altera o tipo da coluna categoria_produto para VARCHAR
+ALTER TABLE produtos
+MODIFY COLUMN categoria_produto varchar(15);
+
+-- Alterando o nome categoria
+UPDATE produtos
+SET categoria_produto = CASE categoria_produto
+    WHEN 1 THEN 'Categoria X'
+    WHEN 2 THEN 'Categoria Y'
+    WHEN 3 THEN 'Categoria Z'
+    WHEN 4 THEN 'Categoria W'
+    WHEN 5 THEN 'Categoria Q'
+END;

@@ -50,14 +50,13 @@ create table materiaPrima_produto(
 alter table estoque_produtos add column qtde_saida int;
 alter table estoque_materiaPrima add column qtde_saida int;
 
-#CRIAÇÃO DE TABELA FORNECEDOR
--- Tabela fornecedor
- 
+-- CRIAÇÃO DE TABELA FORNECEDOR
 CREATE TABLE fornecedor (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(50)
 );
 
+-- CRIAÇÃO DE TABELA DE RELACIONAMENTO ENTRE MATÉRIA-PRIMA E FORNECEDOR. 
 create table materiaPrima_fornecedor(
 	id INT PRIMARY KEY AUTO_INCREMENT,
     id_materiaPrima INT,
