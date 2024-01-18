@@ -1,4 +1,5 @@
-# Projeto Dashboard em Power BI
+# Projeto Dashboard em Power BI  
+<img src='./Imagens/capaDash.png'>
 Este é um projeto que visa criar um dashboard interativo no Power BI utilizando dados gerados aleatoriamente por scripts em Python, com a ajuda da biblioteca Faker. Os dados são armazenados em um banco de dados MySQL para posterior tratamento e visualização no Power BI.
 
 ## Objetivo do Projeto
@@ -17,10 +18,10 @@ O objetivo principal deste projeto é demonstrar a capacidade de criar visualiza
 - Dashboard/: Aqui você encontrará o arquivo do projeto Power BI (.pbix) que se conecta ao banco de dados MySQL e cria visualizações.
 
 ## Instruções de Execução
-Execute os scripts em Python na pasta Script Base de Dados/ para gerar dados aleatórios.  
-Configure e execute o banco de dados MySQL usando os scripts na pasta Banco de Dados/ na seguinte ordem: modelagemInicial.sql e em seguida populacao.sql.  
-Abra o arquivo do projeto Power BI localizado em Dashboard/ e ajuste as conexões ao banco de dados conforme necessário.  
-Explore e ajuste as visualizações conforme suas necessidades.  
+- Execute os scripts em Python na pasta Script Base de Dados/ para gerar dados aleatórios.  
+- Configure e execute o banco de dados MySQL usando os scripts na pasta Banco de Dados/ na seguinte ordem: modelagemInicial.sql e em seguida populacao.sql.  
+- Abra o arquivo do projeto Power BI localizado em Dashboard/ e ajuste as conexões ao banco de dados conforme necessário.  
+- Explore e ajuste as visualizações conforme suas necessidades.  
 
 ## Notas Adicionais
 Certifique-se de ter as bibliotecas Python necessárias instaladas antes de executar os scripts. Para a manipulação do banco de dados MySQL, verifique se você possui as credenciais corretas e as permissões necessárias.
