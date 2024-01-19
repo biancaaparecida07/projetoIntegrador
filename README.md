@@ -23,11 +23,15 @@ O objetivo principal deste projeto é demonstrar a capacidade de criar visualiza
 - Abra o arquivo do projeto Power BI localizado em Dashboard/ e ajuste as conexões ao banco de dados conforme necessário.  
 - Explore e ajuste as visualizações conforme suas necessidades.  
 
+## Pré-Visualização  
+Concluindo o projeto, este é um gif que mostra como funcionam as interações com o produto desenvolvido.  
+
+<img src='./Imagens/gifDash.gif'>  
+
 ## Notas Adicionais
-Certifique-se de ter as bibliotecas Python necessárias instaladas antes de executar os scripts. Para a manipulação do banco de dados MySQL, verifique se você possui as credenciais corretas e as permissões necessárias.
+Certifique-se de ter as bibliotecas Python necessárias instaladas antes de executar os scripts. Para a manipulação do banco de dados MySQL, verifique se você possui as credenciais corretas e as permissões necessárias.  
 
 ## ✒️ Autoras
-
 [Bianca Aparecida](https://github.com/biancaaparecida07)  
 [Larisse Rodrigues](https://github.com/Larisserds)  
 [Ana Clara Ribeiro](https://github.com/anacriibeiro)  
